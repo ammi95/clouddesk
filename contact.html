@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AgriSense</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="/"><img src="assets/images/logo.png" alt=""></a>
+        </div>
+        <nav>
+            <a href="/#features">Features</a>
+            <a href="about.html">About</a>
+            <a href="/#dashboard">Dashboard</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-btns">
+            <a href="login.html" class="login">Login</a>
+            <a href="javascript:void(0)" class="demo" onclick="openModal()">Get Demo</a>
+        </div>
+    </header>
+
+
+    <section class="banner">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you. Get in touch with our team.</p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-container">
+
+        <!-- LEFT IMAGE -->
+        <div class="contact-image">
+            <img src="assets/images/contact.jpg" alt="Farm">
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="contact-form">
+            <h2 style="color: #121214; font-size: 28px;">Get in Touch</h2>
+            <form id="contactform">
+                <input type="text" id="name1" placeholder="Full Name">
+                <input type="email" id="email1" placeholder="Email Address">
+                <input type="text" id="subject1" placeholder="Subject">
+
+                <textarea id="message1" placeholder="Your Message"></textarea>
+
+                <p class="form-msg" id="formMsg"></p>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT INFO -->
+    <section class="contact-info">
+
+        <div class="info-card">
+            <img src="assets/images/location.png">
+            <h3>Our Location</h3>
+            <p>Delhi, India</p>
+        </div>
+
+        <div class="info-card">
+            <img src="assets/images/mail.png">
+            <h3>Email</h3>
+            <p>support@agrisense.com</p>
+        </div>
+
+        <div class="info-card">
+            <img src="assets/images/phone-call.png">
+            <h3>Phone</h3>
+            <p>+91 98765 43210</p>
+        </div>
+
+    </section>
+
+    <!-- MAP -->
+    <section class="map">
+        <iframe src="https://maps.google.com/maps?q=Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-col">
+                <h3>CloudDesk</h3>
+                <p>Cloud migration, monitoring, and cost optimization platform for modern enterprises.</p>
+            </div>
+
+            <!-- Product -->
+            <div class="footer-col">
+                <h4>Product</h4>
+                <a href="/#features">Features</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="/#dashboard">Dashboard</a>
+            </div>
+
+            <!-- Company -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <!-- Resources -->
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="#">Docs</a>
+                <a href="contact.html">Support</a>
+            </div>
+
+            <!-- Social -->
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="socials">
+                    <a href="#">
+                        <svg width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M22 12a10 10 0 1 0-11.5 9.9v-7H7v-3h3.5V9.5c0-3.4 2-5.3 5-5.3
+                    1.4 0 2.8.2 2.8.2v3h-1.6c-1.6 0-2.1 1-2.1 2v2.4H18l-.5 3h-2.8v7A10 10 0 0 0 22 12" />
+                        </svg>
+                    </a>
+
+                    <!-- Twitter -->
+                    <a href="#">
+                        <svg width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M22 5.8c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.3 1.7-2.2-.8.5-1.6.8-2.5 1
+                    a4 4 0 0 0-6.8 3.6A11.3 11.3 0 0 1 3 4.9a4 4 0 0 0 1.2 5.3c-.6 0-1.2-.2-1.7-.5
+                    0 2 1.4 3.8 3.4 4.2-.4.1-.8.2-1.2.2-.3 0-.6 0-.9-.1.6 1.8 2.3 3.2 4.3 3.2
+                    A8 8 0 0 1 2 19.5a11.3 11.3 0 0 0 6.1 1.8c7.3 0 11.3-6.1 11.3-11.3v-.5
+                    c.8-.5 1.4-1.2 1.9-2" />
+                        </svg>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="#">
+                        <svg width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M20.5 3h-17A1.5 1.5 0 0 0 2 4.5v15A1.5 1.5 0 0 0 3.5 21h17
+                    a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 20.5 3zM8 18H5V9h3zm-1.5-10.3
+                    A1.7 1.7 0 1 1 6.5 4a1.7 1.7 0 0 1 0 3.7zM19 18h-3v-4.5c0-1.1-.4-1.8-1.3-1.8
+                    -.7 0-1.1.5-1.3 1-.1.2-.1.5-.1.8V18h-3V9h3v1.2c.4-.6 1.1-1.5 2.7-1.5
+                    2 0 3.5 1.3 3.5 4.1z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <p>© 2026 CloudDesk. All rights reserved.</p>
+        </div>
+
+    </footer>
+    <div class="modal" id="demoModal">
+
+        <div class="modal-content" id="modalBox">
+
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <h2>Request a Demo</h2>
+
+            <form id="demoForm">
+
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Farm Size / Location">
+
+                <p class="error" id="formError"></p>
+
+                <button type="submit">Submit Request</button>
+
+            </form>
+
+        </div>
+
+    </div>
+    <script>
+        const modal = document.getElementById("demoModal");
+        const form = document.getElementById("demoForm");
+        const error = document.getElementById("formError");
+        const box = document.getElementById("modalBox");
+
+        function openModal() {
+            document.getElementById("demoModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("demoModal").style.display = "none";
+        }
+
+        /* close outside */
+        window.onclick = function (e) {
+            const modal = document.getElementById("demoModal");
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        /* FORM VALIDATION */
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            if (name === "" || email === "") {
+                error.innerText = "Please fill all required fields";
+
+                box.classList.add("shake");
+                setTimeout(() => box.classList.remove("shake"), 300);
+            } else {
+                error.classList.add("success");
+                error.innerText = "✅ Request submitted successfully!";
+
+                form.reset();
+            }
+        });
+
+        const contactform = document.getElementById("contactform");
+        const msg = document.getElementById("formMsg");
+
+        contactform.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name1").value.trim();
+            const email = document.getElementById("email1").value.trim();
+            const subject = document.getElementById("subject1").value.trim();
+            const message = document.getElementById("message1").value.trim();
+
+            // Email regex
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (name === "" || email === "" || message === "") {
+                showError("Please fill all required fields");
+            }
+            else if (!email.match(emailPattern)) {
+                showError("Please enter a valid email");
+            }
+            else {
+                msg.classList.remove("error");
+                msg.classList.add("success");
+                msg.innerText = "✅ Thanku for contacting us. we will get back to shortly";
+                contactform.reset();
+            }
+        });
+
+        function showError(text) {
+            msg.classList.remove("success");
+            msg.classList.add("error");
+            msg.innerText = text;
+        }
+    </script>
+
+</body>
+
+</html>
