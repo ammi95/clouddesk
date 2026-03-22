@@ -50,7 +50,7 @@
       <!-- Starter -->
       <div class="pricing-card">
         <h3>Starter</h3>
-        <h2 class="price" data-month="999" data-year="799">₹999</h2>
+        <h2 class="price" data-month="89.00" data-year="890.00">€89.00</h2>
         <p>Perfect for small teams</p>
 
         <ul>
@@ -66,7 +66,7 @@
       <div class="pricing-card popular">
         <span class="badge">Most Popular</span>
         <h3>Pro</h3>
-        <h2 class="price" data-month="2999" data-year="2499">₹2999</h2>
+        <h2 class="price" data-month="199.00" data-year="1990.00">€199.00</h2>
         <p>Best for growing businesses</p>
 
         <ul>
@@ -82,7 +82,7 @@
       <!-- Enterprise -->
       <div class="pricing-card">
         <h3>Enterprise</h3>
-        <h2>Custom</h2>
+        <h2 class="price" data-month="499.00" data-year="4490.00">€499.00</h2>
         <p>For large organizations</p>
 
         <ul>
@@ -250,7 +250,7 @@
         if (!startTime) startTime = currentTime;
         let progress = Math.min((currentTime - startTime) / duration, 1);
         let value = Math.floor(progress * (end - start) + start);
-        el.innerText = "₹" + value;
+        el.innerText = "€" + value;
 
         if (progress < 1) {
           requestAnimationFrame(animation);
@@ -262,7 +262,7 @@
 
     toggle.addEventListener("change", () => {
       prices.forEach(price => {
-        let current = parseInt(price.innerText.replace("₹", ""));
+        let current = parseInt(price.innerText.replace("€", ""));
         let target = toggle.checked
           ? parseInt(price.dataset.year)
           : parseInt(price.dataset.month);
