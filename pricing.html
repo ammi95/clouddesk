@@ -59,7 +59,7 @@
           <li>✔ 1 Cloud Account</li>
         </ul>
 
-        <button class="btn-outline">Get Started</button>
+        <a href="login.html" class="btn-outline" style="margin-top: 60px; display: block;">Get Started</a>
       </div>
 
       <!-- Pro -->
@@ -76,7 +76,7 @@
           <li>✔ CI/CD Integration</li>
         </ul>
 
-        <button class="btn">Get Started</button>
+        <a href="login.html" class="btn" style="display: block;">Get Started</a>
       </div>
 
       <!-- Enterprise -->
@@ -92,7 +92,7 @@
           <li>✔ Custom Integrations</li>
         </ul>
 
-        <button class="btn-outline">Contact Sales</button>
+        <a href="login.html" class="btn-outline" style="margin-top: 60px; display: block;">Contact Sales</a>
       </div>
 
     </div>
@@ -189,7 +189,7 @@
         <input type="email" id="email" placeholder="Email Address" required>
         <input type="text" placeholder="Farm Size / Location">
 
-        <p class="error" id="formError"></p>
+        <p class="" id="formError"></p>
 
         <button type="submit">Submit Request</button>
 
@@ -238,6 +238,37 @@
 
         form.reset();
       }
+    });
+    const toggle = document.getElementById("toggle");
+    const prices = document.querySelectorAll(".price");
+
+    function animateValue(el, start, end) {
+      let duration = 300;
+      let startTime = null;
+
+      function animation(currentTime) {
+        if (!startTime) startTime = currentTime;
+        let progress = Math.min((currentTime - startTime) / duration, 1);
+        let value = Math.floor(progress * (end - start) + start);
+        el.innerText = "₹" + value;
+
+        if (progress < 1) {
+          requestAnimationFrame(animation);
+        }
+      }
+
+      requestAnimationFrame(animation);
+    }
+
+    toggle.addEventListener("change", () => {
+      prices.forEach(price => {
+        let current = parseInt(price.innerText.replace("₹", ""));
+        let target = toggle.checked
+          ? parseInt(price.dataset.year)
+          : parseInt(price.dataset.month);
+
+        animateValue(price, current, target);
+      });
     });
   </script>
 </body>

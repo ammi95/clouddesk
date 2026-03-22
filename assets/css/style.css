@@ -196,7 +196,7 @@ nav a {
     border-radius: 8px;
     font-weight: bold;
     color: #ffffff;
-    opacity: 0.6;
+    /* opacity: 0.6; */
     transition: 0.3s;
     cursor: pointer;
     display: flex;
