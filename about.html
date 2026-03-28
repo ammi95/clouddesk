@@ -205,6 +205,7 @@
 
         <input type="text" id="name" placeholder="Full Name" required>
         <input type="email" id="email" placeholder="Email Address" required>
+        <input type="phone" id="phone" maxlength="10" placeholder="phone number" required>
         <input type="text" id="service" placeholder="service name" required>
 
         <p class="" id="formError"></p>
@@ -262,6 +263,9 @@
 
         form.reset();
       }
+    });
+     document.getElementById("phone").addEventListener("input", function () {
+      this.value = this.value.replace(/[^0-9]/g, "");
     });
   </script>
 </body>
