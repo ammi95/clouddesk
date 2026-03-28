@@ -12,7 +12,7 @@ body {
 }
 
 /* Navbar */
-.navbar {
+/* .navbar {
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -25,6 +25,25 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 
+} */
+
+/* .navbar.header-fixed {
+    background: #EB9F3E;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+} */
+/* .nav-btns{
+    flex: 0 1 25%;
+    max-width: 25%;
+ }
+.navbar .logo{
+    flex: 0 1 35%;
+    max-width: 35%;
+    text-align: center;
+ }
+.navbar nav{
+    flex: 0 1 40%;
+    max-width: 40%;
 }
 
 nav a {
@@ -50,10 +69,10 @@ nav a {
     margin-right: 10px;
     font-size: 16px;
     color: #ffffff;
-}
+} */
 
 /* Buttons */
-.btn {
+/* .btn {
     background: #EB9F3E;
     border: none;
     padding: 10px 20px;
@@ -96,9 +115,128 @@ nav a {
         margin-top: 10px;
     }
 
-}
+} */
 
 /* Hero */
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(18, 18, 20, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Links */
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Buttons */
+.nav-btns {
+    display: flex;
+    align-items: center;
+}
+
+.login {
+    margin-right: 10px;
+}
+
+/* .demo {
+    background: #EB9F3E;
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 6px;
+} */
+
+/* Hamburger */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.demo {
+    background: #EB9F3E;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    animation: glowBlink 1.5s infinite;
+}
+
+@keyframes glowBlink {
+    0% {
+        box-shadow: 0 0 5px rgba(235,159,62,0.5);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(235,159,62,1);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(235,159,62,0.5);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #121214;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .nav-btns {
+        margin-top: 15px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .demo,
+    .login {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
 .hero {
     display: flex;
     align-items: center;
@@ -107,6 +245,7 @@ nav a {
     background: linear-gradient(to right, #121214, #4E4D52);
     margin-top: 50px;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 /* Left Content */
@@ -126,9 +265,25 @@ nav a {
 
 .hero-buttons {
     margin-bottom: 20px;
-    display: flex;
+    display: inline-block;
+    /* display: flex;
     width: 50%;
-    justify-content: space-between;
+    justify-content: space-between; */
+}
+.hero-buttons a{
+    border: 1px solid #EB9F3E;
+    padding: 10px 25px;
+    color: #ffffff;
+    background: #EB9F3E;
+    border-radius: 10px;
+    /* width: 100%; */
+    margin: 0 10px;
+    display: inline-block;
+    margin-top: 20px;
+}
+.hero-buttons .btn-outline{
+    border: 1px solid #EB9F3E;
+    background: none;
 }
 
 .hero-points {
@@ -160,12 +315,23 @@ nav a {
 
 
 /* Responsive */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+    .hero-content{
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+    .hero-visual{
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
     .hero-buttons {
         margin-bottom: 20px;
         display: flex;
         width: 100%;
         justify-content: space-between;
+    }
+    .hero-buttons a{
+        white-space: nowrap;
     }
 }
 
@@ -202,6 +368,12 @@ nav a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media (max-width: 768px){
+    .logo-item{
+        flex: 0 1 50%;
+        max-width: 50%;
+    }
 }
 
 /* Hover effect */

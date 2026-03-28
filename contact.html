@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CloudDesk-Contact</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/auth.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,20 +15,32 @@
 
     <!-- Navbar -->
     <header class="navbar">
+
+        <!-- Logo -->
         <div class="logo">
-            <a href="/"><img src="assets/images/logo.png" alt=""></a>
+            <a href="/"><img src="assets/images/logo.png" alt="logo"></a>
         </div>
-        <nav>
+
+        <!-- Hamburger -->
+        <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
+
+        <!-- Nav -->
+        <nav id="navMenu">
             <a href="/#features">Features</a>
             <a href="about.html">About</a>
             <a href="/#dashboard">Dashboard</a>
             <a href="pricing.html">Pricing</a>
             <a href="contact.html">Contact</a>
+
+            <!-- Buttons inside nav for mobile -->
+            <div class="nav-btns">
+                <a href="login.html" class="login">Login</a>
+                <a href="javascript:void(0)" class="demo" onclick="openModal()">Book Demo</a>
+            </div>
         </nav>
-        <div class="nav-btns">
-            <a href="login.html" class="login">Login</a>
-            <a href="javascript:void(0)" class="demo" onclick="openModal()">Get Demo</a>
-        </div>
+
     </header>
 
 
@@ -129,7 +143,7 @@
             <div class="footer-col">
                 <h4>Follow Us</h4>
                 <div class="socials">
-                    <a href="#">
+                    <a href="contact.html">
                         <svg width="20" height="20" viewBox="0 0 24 24">
                             <path fill="currentColor" d="M22 12a10 10 0 1 0-11.5 9.9v-7H7v-3h3.5V9.5c0-3.4 2-5.3 5-5.3
                     1.4 0 2.8.2 2.8.2v3h-1.6c-1.6 0-2.1 1-2.1 2v2.4H18l-.5 3h-2.8v7A10 10 0 0 0 22 12" />
@@ -137,7 +151,7 @@
                     </a>
 
                     <!-- Twitter -->
-                    <a href="#">
+                    <a href="contact.html">
                         <svg width="20" height="20" viewBox="0 0 24 24">
                             <path fill="currentColor" d="M22 5.8c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.3 1.7-2.2-.8.5-1.6.8-2.5 1
                     a4 4 0 0 0-6.8 3.6A11.3 11.3 0 0 1 3 4.9a4 4 0 0 0 1.2 5.3c-.6 0-1.2-.2-1.7-.5
@@ -148,7 +162,7 @@
                     </a>
 
                     <!-- LinkedIn -->
-                    <a href="#">
+                    <a href="contact.html">
                         <svg width="20" height="20" viewBox="0 0 24 24">
                             <path fill="currentColor" d="M20.5 3h-17A1.5 1.5 0 0 0 2 4.5v15A1.5 1.5 0 0 0 3.5 21h17
                     a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 20.5 3zM8 18H5V9h3zm-1.5-10.3
@@ -180,7 +194,7 @@
 
                 <input type="text" id="name" placeholder="Full Name" required>
                 <input type="email" id="email" placeholder="Email Address" required>
-                <input type="text" placeholder="Farm Size / Location">
+                <input type="text" id="service" placeholder="service name" required>
 
                 <p class="" id="formError"></p>
 
@@ -192,6 +206,12 @@
 
     </div>
     <script>
+         const toggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("navMenu");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
         const modal = document.getElementById("demoModal");
         const form = document.getElementById("demoForm");
         const error = document.getElementById("formError");
@@ -256,7 +276,7 @@
             else {
                 msg.classList.remove("error");
                 msg.classList.add("success");
-                msg.innerText = "✅ Thanku for contacting us. we will get back to shortly";
+                msg.innerText = "✅ Thank you for contacting us. we will get back to shortly";
                 contactform.reset();
             }
         });
