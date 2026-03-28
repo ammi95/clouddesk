@@ -244,13 +244,13 @@ nav a {
     padding: 50px;
     background: linear-gradient(to right, #121214, #4E4D52);
     margin-top: 50px;
-    gap: 30px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
 /* Left Content */
 .hero-content {
-    max-width: 50%;
+    max-width: 49%;
 }
 
 .hero h1 {
@@ -303,7 +303,7 @@ nav a {
 
 .hero-visual {
     position: relative;
-    width: 50%;
+    width: 49%;
 }
 
 /* Main dashboard */
