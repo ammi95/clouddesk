@@ -860,6 +860,26 @@ nav a {
     padding: 50px 20px;
     margin-top: 50px;
 }
+.pricing-section .btn-outline {
+    background: transparent;
+    border: 1px solid #EB9F3E;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    white-space: nowrap;
+    display: inline-block;
+}
+.pricing-section .btn {
+    background: #EB9F3E;
+    border: 1px solid #EB9F3E;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    white-space: nowrap;
+    display: inline-block;
+}
 
 .pricing-section h1 {
     color: #121214;
